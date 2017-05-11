@@ -2,6 +2,11 @@
 
 # dependencies
 /node_modules
+src/**/*.css
+.idea/Foundation-React-Sample-App.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
 
 # testing
 /coverage
