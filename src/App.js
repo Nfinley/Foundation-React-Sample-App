@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import '../public/css/index.css';
 // import Foundation from 'react-foundation';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import Form from './components/Form';
 
 

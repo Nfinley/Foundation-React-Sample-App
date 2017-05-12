@@ -1,5 +1,5 @@
 p {
-  font-size: 16px; }
+  font-size: 14px; }
 
 span {
   border-bottom: solid 2px #1779ba; }
@@ -19,6 +19,9 @@ span {
 
 .App-intro {
   font-size: large; }
+
+.container {
+  padding-bottom: 2rem; }
 
 @keyframes App-logo-spin {
   from {
