@@ -42,33 +42,39 @@ class Form extends Component {
                 <form noValidate id="form" data-abide onSubmit={this.handleSubmit}>
                     <Row>
                         <Column medium={5} offsetOnMedium={4}>
-                            <label> <p> HTML input field: </p>
-                                <input type="text" name="name" aria-label="Name Field"/>
+                            <label> <h6> HTML input field: </h6>
+                                <input type="text" name="name" aria-label="Input Text"/>
                             </label>
                         </Column>
                     </Row>
                     <Row>
                         <Column medium={6} offsetOnMedium={4}>
-                            <label className="" aria-label="Name Field"> <p> Select Menu: </p>
+                            <label className="" aria-label="Select Menu"> <h6> Select Menu: </h6>
 
+                                <select>
+                                    <option value="husker">Husker</option>
+                                    <option value="starbuck">Starbuck</option>
+                                    <option value="hotdog">Hot Dog</option>
+                                    <option value="apollo">Apollo</option>
+                                </select>
                             </label>
                         </Column>
                     </Row>
                     <Row>
                         <Column medium={6} offsetOnMedium={4}>
-                             <p> Checkboxes </p>
+                             <h6> Checkboxes: </h6>
                                 <fieldset>
-                                    <input id="checkbox12" type="checkbox"/><label htmlFor="checkbox12">Checkbox 1</label>
-                                    <input id="checkbox22" type="checkbox"/><label htmlFor="checkbox22">Checkbox 2</label>
-                                    <input id="checkbox32" type="checkbox"/><label htmlFor="checkbox32">Checkbox 3</label>
+                                    <input id="checkbox1" type="checkbox"/><label htmlFor="checkbox1">Food</label>
+                                    <input id="checkbox2" type="checkbox"/><label htmlFor="checkbox2">Wine</label>
+                                    <input id="checkbox3" type="checkbox"/><label htmlFor="checkbox3">Cheese</label>
                                 </fieldset>
 
                         </Column>
                     </Row>
                     <Row>
                         <Column medium={6} offsetOnMedium={4}>
-                            <label> <h4> Radio Buttons </h4>
-                                    <Switch aria-label="radio-buttons" input={{ type: InputTypes.RADIO, name: 'testGroup', defaultChecked: true }} size={Sizes.TINY}/>
+                            <label> <h6> Radio Buttons </h6>
+                                    <Switch input={{ type: InputTypes.RADIO, name: 'testGroup', defaultChecked: true }} size={Sizes.TINY}/>
                                     <Switch input={{ type: InputTypes.RADIO, name: 'testGroup' }} size={Sizes.SMALL} active={{ text: 'Yes' }} inactive={{ text: 'No' }}/>
                                     <Switch input={{ type: InputTypes.RADIO, name: 'testGroup' }}/>
 
