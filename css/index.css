@@ -1,3 +1,9 @@
+p {
+  font-size: 14px; }
+
+span {
+  border-bottom: solid 2px #1779ba; }
+
 .App {
   text-align: center; }
 
@@ -13,6 +19,9 @@
 
 .App-intro {
   font-size: large; }
+
+.container {
+  padding-bottom: 2rem; }
 
 @keyframes App-logo-spin {
   from {
