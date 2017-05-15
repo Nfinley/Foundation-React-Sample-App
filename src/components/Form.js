@@ -9,7 +9,9 @@ import {
     Switch,
     Sizes,
     Callout,
-    Colors
+    Colors,
+    InputTypes,
+    SwitchInput
 } from 'react-foundation';
 
 
@@ -108,25 +110,27 @@ class Form extends Component {
 
                     <Row className="container">
                         <Column medium={5} offsetOnMedium={4}>
-                            <label id="select-menu" role="listbox"><h6  aria-label="Select Menu"> Select Menu: </h6>
+                                <fieldset aria-label="Select-menu" role="listbox" id="select-menu">
+                                    <legend aria-label="Select-menu" >Select Menu:</legend>
+                                    <select>
+                                        <option value="husker" role="menuitem">Husker</option>
+                                        <option value="starbuck" role="menuitem">Starbuck</option>
+                                        <option value="hotdog" role="menuitem">Hot Dog</option>
+                                        <option value="apollo" role="menuitem">Apollo</option>
+                                    </select>
+                                </fieldset>
 
-                                <select>
-                                    <option value="husker">Husker</option>
-                                    <option value="starbuck">Starbuck</option>
-                                    <option value="hotdog">Hot Dog</option>
-                                    <option value="apollo">Apollo</option>
-                                </select>
-                            </label>
+
                         </Column>
                     </Row>
-                    <Row className="container" aria-label="A selection of checkboxes">
+                    <Row className="container">
                         <Column medium={6} offsetOnMedium={4}>
                             <h6 > <span>Checkboxes:</span></h6>
-                            <fieldset >
-                                <legend aria-label="A selection of checkboxes"><p>Choose your favorite food</p></legend>
-                                <input id="checkbox1" type="checkbox" aria-label="Pizza"/><label htmlFor="checkbox1">Pizza</label>
-                                <input id="checkbox2" type="checkbox"/><label htmlFor="checkbox2">Hamburger</label>
-                                <input id="checkbox3" type="checkbox"/><label htmlFor="checkbox3">Salad</label>
+                            <fieldset aria-label="checkboxes">
+                                <legend >Choose your favorite food</legend>
+                                <input id="checkbox1" type="checkbox" role="checkbox" value="Pizza"/><label htmlFor="checkbox1">Pizza</label>
+                                <input id="checkbox2" type="checkbox" role="checkbox" value="Hamburger"/><label htmlFor="checkbox2">Hamburger</label>
+                                <input id="checkbox3" type="checkbox" role="checkbox" value="Salad"/><label htmlFor="checkbox3">Salad</label>
                             </fieldset>
 
                         </Column>
@@ -134,21 +138,30 @@ class Form extends Component {
                     <Row className="container">
                         <Column medium={6} offsetOnMedium={4}>
                             <h6> <span>Radio Buttons: </span></h6>
-                            <label>
                                 <fieldset aria-label="radio-buttons">
-                                    <legend>Do you Like This page?</legend>
-                                    <Switch size={Sizes.SMALL}/>
-
+                                    <legend >Who is favorite soccer team?</legend>
+                                    <label htmlFor="liverpool"> Liverpool</label><Switch role="radio" id="liverpool" size={Sizes.SMALL} input={{type: InputTypes.RADIO, name: 'soccergroup', defaultChecked: 'true' }}/>
+                                    <label htmlFor="chelsea">Chelsea </label><Switch role="radio" id="chelsea" size={Sizes.SMALL} input={{type: InputTypes.RADIO, name: 'soccergroup' }}/>
+                                    <label htmlFor="manchester-city">Manchester City</label><Switch role="radio" id="manchester-city" size={Sizes.SMALL} input={{type: InputTypes.RADIO, name: 'soccergroup' }}/>
                                 </fieldset>
-                            </label>
+                        </Column>
+                    </Row>
+                    <Row className="container">
+                        <Column medium={6} offsetOnMedium={4}>
+                            <fieldset aria-label="confirm-your-agreement">
+                                <legend>Select:</legend>
+                                <input id="confirm-checkbox" type="checkbox" /><label htmlFor="confirm-checkbox">I agree to the terms and conditions</label>
+                            </fieldset>
 
                         </Column>
                     </Row>
                     <Row>
-                        <Column medium={6} offsetOnMedium={6}>
+                        <Column medium={4} offsetOnMedium={4}>
+                            <Button style={{marginRight: '20px'}} color={Colors.SECONDARY}  isHollow id="back-button">Back</Button>
                             <Button
                                 type="submit"
-                                size={Sizes.LARGE}>Submit
+                                id="next-button"
+                                >Submit
                             </Button>
                         </Column>
                     </Row>
